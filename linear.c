@@ -14,7 +14,7 @@ int main(void)
         return 1;
     }
 
-    printf("Enter %d elements: \n");
+    printf("Enter %d elements: \n", n);
     for(int i = 0; i < n; ++i)
         scanf("%d", &arr[i]);
 
