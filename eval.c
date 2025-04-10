@@ -3,7 +3,7 @@
 float GetFloat(const char* msg)
 {
     float var;
-    puts(msg);
+    printf("%s", msg);
     scanf("%f", &var);
     return var;
 }
