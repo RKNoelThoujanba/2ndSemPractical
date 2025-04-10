@@ -38,3 +38,6 @@ add_executable(stringrev stringrev.c)
 
 project(triangle)
 add_executable(triangle triangle.c)
+
+project(mat)
+add_executable(mat mat.c)
