@@ -8,7 +8,7 @@ cd 2ndSemPractical <br>
 mkdir build <br>
 cd build <br>
 cmake ../ <br>
-cmake --build . --config release [-j <number of threads to be allocated to compile>] <br>
+cmake --build . --config release -j <number of threads to be allocated to compile <br>
 
 <br><br>
 
