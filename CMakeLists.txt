@@ -44,3 +44,6 @@ add_executable(mat mat.c)
 
 project(call)
 add_executable(call call.c)
+
+project(fact)
+add_executable(fact factorial.c)
