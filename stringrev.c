@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdint.h>
+#include <stddef.h>
 
 #define STR_MAX_SZ  512
 
