@@ -23,7 +23,7 @@ int main(void)
     scanf("%d", &index);
     if(index < 0 || index > n)
     {
-        printf("Invalid indaex = %d\n", index);
+        printf("Invalid index = %d\n", index);
         printf("Count = %d, MAX_SIZE = %d\n", n, ARR_MAX_SZ);
         return 2;
     }
