@@ -41,3 +41,6 @@ add_executable(triangle triangle.c)
 
 project(mat)
 add_executable(mat mat.c)
+
+project(call)
+add_executable(call call.c)
