@@ -5,6 +5,7 @@
 
 size_t stringLen(const char* str)
 {
+    if(str == NULL) return 0;
     size_t len = 0;
     for(const char* s = str; *s != 0; ++s) ++len;
     return len;
