@@ -14,36 +14,37 @@ elseif(CMAKE_COMPILER_IS_GNUCC OR CMAKE_COMPILER_IS_GNUCXX)
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wno-long-long -pedantic")
 endif()
 
+
 project(del)
-add_executable(del del.c)
+add_executable(del CSrc/del.c)
 
 
 project(eval)
-add_executable(eval eval.c)
+add_executable(eval CSrc/eval.c)
 
 project(evenodd)
-add_executable(evenodd evenodd.c)
+add_executable(evenodd CSrc/evenodd.c)
 
 project(fib)
-add_executable(fib fib.c)
+add_executable(fib CSrc/fib.c)
 
 project(insert)
-add_executable(insert insert.c)
+add_executable(insert CSrc/insert.c)
 
 project(linear)
-add_executable(linear linear.c)
+add_executable(linear CSrc/linear.c)
 
 project(stringrev)
-add_executable(stringrev stringrev.c)
+add_executable(stringrev CSrc/stringrev.c)
 
 project(triangle)
-add_executable(triangle triangle.c)
+add_executable(triangle CSrc/triangle.c)
 
 project(mat)
-add_executable(mat mat.c)
+add_executable(mat CSrc/mat.c)
 
 project(call)
-add_executable(call call.c)
+add_executable(call CSrc/call.c)
 
 project(fact)
-add_executable(fact factorial.c)
+add_executable(fact CSrc/factorial.c)
