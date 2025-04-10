@@ -33,6 +33,11 @@ int main(void)
     }
 
     size_t len = stringLen(str);
+    if(len <= 1)
+    {
+        printf("Empty String\n");
+        return 2;
+    }
     str[--len] = 0; //removing trailing '\n' (0xa) byte
 
     
