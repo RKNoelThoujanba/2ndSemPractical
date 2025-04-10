@@ -12,6 +12,12 @@ int main(void)
         return 1;
     }
 
+    if(n == 1)
+    {
+        printf("0\n");
+        return 0;
+    }
+
     printf("%d  %d  ", fibElem[0], fibElem[1]);
     for(int i = 2; i < n; ++i)
     {
