@@ -3,14 +3,14 @@
 
 <p>
 
-git clone <repo URL here>
-cd 2ndSemPractical
-mkdir build
-cd build
-cmake ../
-cmake --build . --config release [-j <no of threads to be allocated to compile>]
+git clone <repo URL here> <br>
+cd 2ndSemPractical <br>
+mkdir build <br>
+cd build <br>
+cmake ../ <br>
+cmake --build . --config release [-j <no of threads to be allocated to compile>] <br>
 
-
+<br><br>
 
 executables should be in 2ndSemPractical/build/Release
 </p>
