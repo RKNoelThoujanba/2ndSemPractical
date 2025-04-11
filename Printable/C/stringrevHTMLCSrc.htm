@@ -1,0 +1,69 @@
+
+<html>
+        <head>
+            <title> to be filled later </title>  
+            <link rel="stylesheet" type="text/css" href="Assignment-Style.css">
+        </head>
+
+        <body>
+        C PROGRAM: <br> <br>
+        <ol>
+            <li>#include &lt;stdio.h></li>
+<li>#include &lt;stddef.h></li>
+<li></li>
+<li>#define STR_MAX_SZ  512</li>
+<li></li>
+<li>size_t stringLen(const char* str)</li>
+<li>{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;if(str == NULL) return 0;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;size_t len = 0;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;for(const char* s = str; *s != 0; ++s) ++len;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;return len;</li>
+<li>}</li>
+<li></li>
+<li>int main(void)</li>
+<li>{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;char str[512] = {0};</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;printf("Enter String: ");</li>
+<li></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;/*</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;https://en.cppreference.com/w/c/io/fgets</li>
+<li></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;char* fgets( char* restrict str, int count, FILE* restrict stream );</li>
+<li></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;str &nbsp;&nbsp;&nbsp;&nbsp;- &nbsp;&nbsp;&nbsp;&nbsp;pointer to an element of a char array</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;count &nbsp;&nbsp;&nbsp;&nbsp;- &nbsp;&nbsp;&nbsp;&nbsp;maximum number of characters to write (typically the length of str)</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;tream &nbsp;&nbsp;&nbsp;&nbsp;- &nbsp;&nbsp;&nbsp;&nbsp;file stream to read the data from </li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;*/</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;fgets(str, STR_MAX_SZ - 1, stdin); // STR_MAX_SZ - 1 to accomodate '\n' (0xa)</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;if(ferror(stdin))</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("reading from stdin failed\n");</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 1;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;}</li>
+<li></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;size_t len = stringLen(str);</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;if(len &lt;= 1)</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Empty String\n");</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 2;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;}</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;str[--len] = 0; //removing trailing '\n' (0xa) byte</li>
+<li></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;for(size_t i = 0, j = len - 1; i &lt; j; ++i, --j)</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;char tmp = str[i];</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;str[i] = str[j];</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;str[j] = tmp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;}</li>
+<li></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;printf("Reversed String: %s\n", str);</li>
+<li></li>
+<li>}</li>
+
+        </ol>
+        </body>
+</html>
+
+

@@ -1,0 +1,61 @@
+
+<html>
+        <head>
+            <title> to be filled later </title>  
+            <link rel="stylesheet" type="text/css" href="Assignment-Style.css">
+        </head>
+
+        <body>
+            AIM: 
+            <br>
+
+            THEORY:
+
+            <br>
+            ALGORITHM: <br> <br>
+            <ol>
+                <li>Start</li>
+<li>Input rowA, colA</li>
+<li>Initialize a matrix matA (zero based indexing) of dimensions rowA X colA</li>
+<li>i = 0</li>
+<li>while i &lt; rowA repeat steps 6 - 10</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;j = 0</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;while j &lt; colA repeat steps 8 and 9</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Input matA[i][j]</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j = j + 1</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;i = i + 1</li>
+<li>Input rowB, colB</li>
+<li>Initialize a matrix matB (zero based indexing) of dimensions rowB X colB</li>
+<li>i = 0</li>
+<li>while i &lt; rowB repeat steps 15 - 19</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;j = 0</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;while j &lt; colB repeat steps 17 and 18</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Input matB[i][j]</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j = j + 1</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;i = i + 1</li>
+<li>if rowB != colA then Print cannot multiply and goto 40</li>
+<li>Initialize a matix matProd (Zero based indexing) of dimmension rowA X colB</li>
+<li>i = 0</li>
+<li>while i &lt; rowA repeat steps 24 - 31</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;j = 0</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;while j &lt; colB repeat steps 26 - 30 </li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;k = 0</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while k &lt; colA repeat steps 27 and 28</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;matProd[i][j] = matProd[i][j] + matA[i][k] * matB[k][j]</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;k = k + 1</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j = j + 1</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;i = i + 1</li>
+<li>i = 0</li>
+<li>while i &lt; rowA repeat steps 34 - 39</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;j = 0</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;while j &lt; colB repeat steps 36 and 37</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print matProd[i][j]</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j = j + 1</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;Print new line</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;i = i + 1</li>
+<li>Stop</li>
+
+            </ol>
+        </body>
+</html>
+    

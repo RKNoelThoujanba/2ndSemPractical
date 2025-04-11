@@ -1,0 +1,52 @@
+
+<html>
+        <head>
+            <title> to be filled later </title>  
+            <link rel="stylesheet" type="text/css" href="Assignment-Style.css">
+        </head>
+
+        <body>
+        C PROGRAM: <br> <br>
+        <ol>
+            <li>#include &lt;stdio.h></li>
+<li></li>
+<li>void CallByValue(int n)</li>
+<li>{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;printf("Value of n passed to CallByValue(n) is %d\n", n);</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;n += 1;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;printf("Added +1 to n\n");</li>
+<li>}</li>
+<li></li>
+<li>void CallByReference(int* n)</li>
+<li>{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;if(n == NULL)</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Value of n passed to CallByReference(n) is NULL. Exiting funtion\n");</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;}</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;printf("Value of n passed to CallByReference(n) is %d", *n);</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;*n += 1;</li>
+<li></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;printf("Added +1 to n\n");</li>
+<li>}</li>
+<li></li>
+<li>int main(void)</li>
+<li>{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;int n;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;printf("n: ");</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;scanf("%d", &n);</li>
+<li></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;printf("Call By Value\n");</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;CallByValue(n);</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;printf("Value of n in main() after function is called: %d\n", n);</li>
+<li></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;printf("Call By Reference\n");</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;CallByReference(&n);</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;printf("Value of n in main() after function is called: %d\n", n);</li>
+<li>}</li>
+
+        </ol>
+        </body>
+</html>
+
+

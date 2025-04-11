@@ -1,0 +1,52 @@
+
+<html>
+        <head>
+            <title> to be filled later </title>  
+            <link rel="stylesheet" type="text/css" href="Assignment-Style.css">
+        </head>
+
+        <body>
+        C PROGRAM: <br> <br>
+        <ol>
+            <li>#include &lt;stdio.h></li>
+<li></li>
+<li>#define ARR_MAX_SZ 512</li>
+<li></li>
+<li>int main(void)</li>
+<li>{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;int arr[ARR_MAX_SZ] = {0};</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;int n;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;printf("n: ");</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;scanf("%d", &n);</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;if(n &lt;= 0 || n > ARR_MAX_SZ)</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Invalid n = %d\n", n);</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 1;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;}</li>
+<li></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;printf("Enter %d elements: \n", n);</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;for(int i = 0; i &lt; n; ++i)</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scanf("%d", &arr[i]);</li>
+<li></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;int key;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;printf("Enter element to be searched (key): ");</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;scanf("%d", &key);</li>
+<li></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;for(int i = 0; i &lt; n; ++i)</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(arr[i] == key)</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Key = %d found at index = %d (element number %d)\n", key, i, i+1);</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 0;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;}</li>
+<li></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;printf("Key = %d not found\n", key);</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;return 1;</li>
+<li>}</li>
+
+        </ol>
+        </body>
+</html>
+
+

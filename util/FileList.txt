@@ -1,0 +1,10 @@
+evenodd
+eval
+fib
+factorial
+linear
+del
+triangle
+mat
+call
+stringrev

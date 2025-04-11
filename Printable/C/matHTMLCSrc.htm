@@ -1,0 +1,86 @@
+
+<html>
+        <head>
+            <title> to be filled later </title>  
+            <link rel="stylesheet" type="text/css" href="Assignment-Style.css">
+        </head>
+
+        <body>
+        C PROGRAM: <br> <br>
+        <ol>
+            <li>#include &lt;stdio.h></li>
+<li></li>
+<li>#define MAT_MAX_DIMENSION 256</li>
+<li></li>
+<li>int main(void)</li>
+<li>{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;float matA[MAT_MAX_DIMENSION][MAT_MAX_DIMENSION], matB[MAT_MAX_DIMENSION][MAT_MAX_DIMENSION];</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;float matProd[MAT_MAX_DIMENSION][MAT_MAX_DIMENSION] = {{0}}; //zeroing the memory</li>
+<li></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;//input</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;int rowA, colA;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;printf("Enter the dimensions of matrix A: ");</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;scanf("%d%d", &rowA, &colA);</li>
+<li></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;if(rowA &lt;= 0 || colA &lt;= 0 || rowA > MAT_MAX_DIMENSION || colA > MAT_MAX_DIMENSION)</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Invalid Dimensions: %d x %d\n", rowA, colA);</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 1;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;}</li>
+<li></li>
+<li></li>
+<li></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;printf("Enter A (%d x %d): \n", rowA, colA);</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;for(int i = 0; i &lt; rowA; ++i)</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int j = 0; j &lt; colA; ++j)</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scanf("%f", &matA[i][j]);</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;int rowB, colB;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;printf("Enter the dimensions of matrix B: ");</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;scanf("%d%d", &rowB, &colB);</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;if(rowB &lt;= 0 || colB &lt;= 0 || rowB > MAT_MAX_DIMENSION || colB > MAT_MAX_DIMENSION)</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Invalid Dimensions: %d x %d\n", rowB, colB);</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 1;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;}</li>
+<li></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;if(colB != rowA)</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Invalid dimmensions for matrix multiplication\n");</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("%d x %d,  %d x %d\n", rowA, colA, rowB, colB);</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 2;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;}</li>
+<li></li>
+<li></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;printf("Enter B (%d x %d): \n", rowB, colB);</li>
+<li></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;for(int i = 0; i &lt; rowB; ++i)</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int j = 0; j &lt; colB; ++j)</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scanf("%f", &matB[i][j]);</li>
+<li></li>
+<li></li>
+<li></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;//A X B</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;for(int i = 0; i &lt; rowA; ++i)</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int j = 0; j &lt; colB; ++j)</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int k = 0; k &lt; colA; ++k)</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;matProd[i][j] += matA[i][k] * matB[k][j]; //matProd has already beem zeroed</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;//printing</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;printf("A X B: \n");</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;for(int i = 0; i &lt; rowA; ++i)</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int j = 0; j &lt; colB; ++j)</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("%9.3f", matProd[i][j]);</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;putchar(0xa);//newline</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;}</li>
+<li>}</li>
+
+        </ol>
+        </body>
+</html>
+
+
