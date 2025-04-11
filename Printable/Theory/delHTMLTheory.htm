@@ -13,16 +13,16 @@
             THEORY:<br>
             In C, the size of an array is fixed. In order to achieve a dynamic size array, we allocate the array on the heap and then when extra space is needed, we make a new array with the extra space, copy the elements from the existing array to the new array and then free the old array.
             However, in this experiment, we shall take a stack allocated array of size ARR_MAX_SZ = 512. We shall accompany this array with a user supplied value of n which indicates how many elements are currently in the array.<br>
-            As for deletion, we shall take a user supplied deletion index. We then move all the elements after the deletion index to the left by one unit, thereby overwritting the element to be deleted. We than subtract 1 from n to indicate that the element has been deleted
+            As for deletion, we shall take a user supplied deletion index. We then move all the elements after the deletion index to the left by one unit, thereby overwriting the element to be deleted. We than subtract 1 from n to indicate that the element has been deleted
             <br>
             <br>
             ALGORITHM: <br> <br>
             <ol>
                 <li>Start</li>
 <li>Input n</li>
-<li>Initialize Array arr of size n (Zero basd Indexing) </li>
+<li>Initialize Array arr of size n (Zero based Indexing) </li>
 <li>i = 0</li>
-<li>while i &lt; n repeat setps 6 and 7</li>
+<li>while i &lt; n repeat steps 6 and 7</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;Input arr[i]</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;i = i + 1</li>
 <li>Input deletionIndex</li>

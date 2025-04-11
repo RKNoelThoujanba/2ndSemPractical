@@ -11,21 +11,21 @@
             <br>
             <br>
             THEORY:<br>
-            In C, when a variable is passed to a function, a copy of the variable is made and pushed to the stack frame of the function. So as a result, any modifications made to the variable within the function is made to the copy that is in the stackfrfame of the function. However, if a pointer to the variable is passed to the function, a copy of the pointer is made in the stackframe of the function. Hence, the pointer in the stack frame of the function points to the same memory location that the original poiner points to. <br>
+            In C, when a variable is passed to a function, a copy of the variable is made and pushed to the stack frame of the function. So as a result, any modifications made to the variable within the function is made to the copy that is in the stack frame of the function. However, if a pointer to the variable is passed to the function, a copy of the pointer is made in the stackframe of the function. Hence, the pointer in the stack frame of the function points to the same memory location that the original pointer points to. <br>
             <br>
-            So, if we were to pass a pointer to the function and then inside the function, dereference the pointer and modify its underlying value, the changes in the memory pointer to by the pointer will be reflected out side the function.
+            So, if we were to pass a pointer to the function and then inside the function, dereference the pointer and modify its underlying value, the changes in the memory pointer to by the pointer will be reflected outside the function.
 
             <br>
             From this, two methods of passing variables to functions arise: <br>
             <ol>
-                <li>Pass/Call by Valaue</li>
+                <li>Pass/Call by Value</li>
                 <li>Pass/Call by Reference</li>
             </ol>
 
             <br>
 
             In pass by value, a copy of the variable is made in the stack frame of the function and so any changes made to it inside the function are not reflected elsewhere.
-            In pass by reference, since a copy of the pointer is made in the function's stackframe and that copy of the pointer points to the same data as the original pointer, any modifications made to the underlying data pointed by the pointert is reflected throughout the program.
+            In pass by reference, since a copy of the pointer is made in the function's stackframe and that copy of the pointer points to the same data as the original pointer, any modifications made to the underlying data pointed by the pointer is reflected throughout the program.
             <br>
 
             
