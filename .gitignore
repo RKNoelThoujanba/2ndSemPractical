@@ -3,3 +3,4 @@ build/
 *.out
 .vscode/
 *.log
+util/__pycache__

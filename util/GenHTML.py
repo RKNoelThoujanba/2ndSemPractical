@@ -109,7 +109,7 @@ def main():
         print("File List not supplied!")
         return
     files = GetFilePairs(argv[1])
-    print(f"Input files from {argv[1]}:")
+    print(f"Ruunning {argv[0]}...\nInput files from {argv[1]}:")
     for file in files:
         print(f"{file}")
     print()
