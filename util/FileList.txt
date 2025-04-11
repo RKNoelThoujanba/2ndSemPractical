@@ -3,6 +3,7 @@ eval
 fib
 factorial
 linear
+insert
 del
 triangle
 mat

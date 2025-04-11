@@ -1,16 +1,31 @@
 
 <html>
         <head>
-            <title> to be filled later </title>  
+            <title> Expression Evaluation </title>  
             <link rel="stylesheet" type="text/css" href="Assignment-Style.css">
         </head>
 
         <body>
-            AIM: 
+            AIM: To evaluate the expression ((a + b / c * d - e) * (f - g)) where the variables are suppied from the standard input device
+            <br>
+            <br>
             <br>
 
-            THEORY:
+            THEORY:<br>
+            In C, general console IO is done through two file descriptors, stdin and stdout (there is also stderr but we shall not discuss it for this experiment). Whatever is to be written to the console is written to stdout and whatever is to be read from the keyboard inputs to the console is read from stdin. <br>
+            There are several wrapper functions that make it easier to reading and write from stdin and stdout respectively. In this experiment,we shall use scanf for reading from stdin and printf for writting to stdout. <br>
 
+            Signatures: <br>
+            int printf(const char* restrict format, ...); 
+            where format is the format specifer( eg. %f replaced with a float value, %d replaced with an int value) and ... is where the arguments to be used to substitue in the format string is passed.
+            On success, returns the number of bytes written to stdout and on error, returns a suitable negative Value
+            <br>
+            <br>
+
+            int scanf( const char *restrict format, ... );
+            where format is the format specifier( eg. %f replaced with a float reference, %d replaced with an int reference). Whatever references are to be passed are passed to ...
+            On success, returns the number of arguments successfully assigned. On faiure, returns 0 (matching failure on the first term) or EOF(failure before recieving first argument)
+            <br>
             <br>
             ALGORITHM: <br> <br>
             <ol>
