@@ -34,7 +34,7 @@ int main(void)
         return 1;
     }
 
-    if(colB != rowA)
+    if(colA != rowB)
     {
         printf("Invalid dimmensions for matrix multiplication\n");
         printf("%d x %d,  %d x %d\n", rowA, colA, rowB, colB);

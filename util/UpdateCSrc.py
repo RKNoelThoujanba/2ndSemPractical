@@ -21,8 +21,7 @@ def main():
         with open(f"{OUTPUT_DIR}C/{fileNameNoExt}HTMLCSrc.htm", "w") as HTMLCSrc:
             HTMLCSrc.write(CHTMLSrc)
 
-    
-    theoryLinks = ""
+
 
     CSrcLinks = ""
 
