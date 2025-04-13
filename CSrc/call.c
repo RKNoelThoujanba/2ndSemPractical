@@ -14,7 +14,7 @@ void CallByReference(int* n)
         printf("Value of n passed to CallByReference(n) is NULL. Exiting funtion\n");
         return;
     }
-    printf("Value of n passed to CallByReference(n) is %d", *n);
+    printf("Value of n passed to CallByReference(n) is %d\n", *n);
     *n += 1;
 
     printf("Added +1 to n\n");
