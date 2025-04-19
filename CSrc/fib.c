@@ -26,4 +26,5 @@ int main(void)
         fibElem[0] = fibElem[1];
         fibElem[1] = sum;
     }
+    putchar(0xa);
 }
