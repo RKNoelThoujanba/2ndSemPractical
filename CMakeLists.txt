@@ -48,3 +48,9 @@ add_executable(call CSrc/call.c)
 
 project(fact)
 add_executable(fact CSrc/factorial.c)
+
+project(factDigitCount)
+add_executable(factDigitCount CSrc/factDigitCount.c)
+
+project(factTrailingZeroCount)
+add_executable(factTrailingZeroCount CSrc/factTrailingZeroCount.c)

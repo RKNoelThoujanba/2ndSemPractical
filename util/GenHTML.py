@@ -65,7 +65,7 @@ def GenHTMLSrc(fileNameNoExt: str) -> tuple[str, str]:
 f"""
 <html>
         <head>
-            <title> to be filled later </title>  
+            <title>Theory</title>  
             <link rel="stylesheet" type="text/css" href="Assignment-Style.css">
         </head>
 
@@ -87,7 +87,7 @@ f"""
 f"""
 <html>
         <head>
-            <title> to be filled later </title>  
+            <title> C Source Code </title>  
             <link rel="stylesheet" type="text/css" href="Assignment-Style.css">
         </head>
 

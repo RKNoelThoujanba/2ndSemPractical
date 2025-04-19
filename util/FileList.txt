@@ -9,3 +9,5 @@ triangle
 mat
 call
 stringrev
+factDigitCount
+factTrailingZeroCount

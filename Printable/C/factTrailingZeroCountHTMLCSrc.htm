@@ -1,0 +1,31 @@
+
+<html>
+        <head>
+            <title> C Source Code </title>  
+            <link rel="stylesheet" type="text/css" href="Assignment-Style.css">
+        </head>
+
+        <body>
+        C PROGRAM: <br> <br>
+        <ol>
+            <li>#include &lt;stdio.h></li>
+<li>#include &lt;math.h></li>
+<li></li>
+<li>typedef unsigned long long u64;</li>
+<li></li>
+<li>int main(void)</li>
+<li>{</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;u64 n;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;scanf("%llu", &n);</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;u64 trailingZeroCount = 0;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;for(u64 i = 5; i &lt;= n; i *= 5)</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;trailingZeroCount += n / i;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;printf("%llu\n", trailingZeroCount);</li>
+<li>}</li>
+
+        </ol>
+        </body>
+</html>
+
+

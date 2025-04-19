@@ -1,0 +1,54 @@
+
+<html>
+        <head>
+            <title> Trailing Zeroes </title>  
+            <link rel="stylesheet" type="text/css" href="Assignment-Style.css">
+        </head>
+
+        <body>
+            AIM: To find the number of trailing zeroes
+            <br>
+            <br>
+            <br>
+
+            THEORY:<br>
+            
+            Let us observe the zeroes in the factorial of a few numbers.<br>
+            4!=24 (0 zeroes)<br>
+            5!=120 (1 zeroes)<br>
+            6!=720 (1 zeroes)<br>
+            7!=5040 (1 zeroes)<br>
+            8!=40320 (1 zeroes)<br>
+            9!=362880 (1 zeroes)<br>
+            10!=3628800 (2 zeroes)<br>
+            11!-14! (2 zeroes)<br>
+            15! (3 zeroes)<br>
+            <br>
+            We can observe that for every multiple of 5, we have a zero being added to the product. This is due to the multiplication of 5 with an even number in the product. So, our problem simplifies to counting the number of 5's in the factors of the number to be calculated. Let us formalize the proof.<br>
+            <br>
+            Let p be a prime number.<br>
+            <br>
+            n!=1x2x…x(n-1)xn<br>
+            <br>
+            We see that any integer m such that 0 < m ≤ n which is divisible by pj and not p(j+1) must be counted exactly j times. That is: once in ⌊n/p⌋, once in ⌊n/(p2)⌋, …, once in ⌊n(pj)⌋. And that is all the occurrences of p as a factor of n!.<br>
+            <br>
+            Thus: μ(No. of occurences of p)=⌊n/p⌋+⌊n/(p<sup>2</sup>)⌋+⋯+⌊n/(p<sup>j</sup>)⌋ <br>
+            <br>
+            <br>
+            <br>
+            ALGORITHM: <br> <br>
+            <ol>
+                <li>Start</li>
+            <li>Input n</li>
+            <li>trailingZeroCount = 0, i = 5</li>
+            <li>while i &lt;= n repeat steps </li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;trailingZeroCount = trailingZeroCount + (n / i)</li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;i = i * 5</li>
+
+            <li>Print trailingZeroCount</li>
+            <li>Stop</li>
+
+            </ol>
+        </body>
+</html>
+    

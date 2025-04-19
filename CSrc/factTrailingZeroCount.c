@@ -7,9 +7,9 @@ int main(void)
 {
     u64 n;
     scanf("%llu", &n);
-    u64 zeroCount = 0;
+    u64 trailingZeroCount = 0;
     for(u64 i = 5; i <= n; i *= 5)
-    	zeroCount += n / i;
+        trailingZeroCount += n / i;
     	
-    printf("%llu\n", zeroCount);
+    printf("%llu\n", trailingZeroCount);
 }

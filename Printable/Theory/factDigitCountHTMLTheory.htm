@@ -1,0 +1,79 @@
+
+<html>
+        <head>
+            <title> Factorial Digit Count</title>  
+            <link rel="stylesheet" type="text/css" href="Assignment-Style.css">
+        </head>
+
+        <body>
+            AIM: To calculate the number of digits in n!
+            <br>
+            <br>
+
+            THEORY: <br>
+
+            We shall try to calculate the factorial of a number and then find out the number of digits in it. <br>
+            <br>
+            1! = 1<br>
+            2! = 12 = 2<br>
+            3! = 123 = 6<br>
+            4! = 1234 = 24<br>
+            .<br>
+            .<br>
+            .<br>
+            10! = 3628800<br>
+            <br>
+            So n! means multiplying all the numbers from 1 to n. For the sample input, 52, we can see from the sample output that the factorial of 52 is 68 digits and this cannot fit in long long data type in C. You may now attempt to store the answer in a string and do multiplication operation on strings(by multiplying each digit of the string individually). Now, let us see how many operations do we need for multiplying 2 strings. Consider 11!, 11! = 1110!, assume we already have 10! stored in a string and 11 stored in a string. Now, to calculate 11! from 10! we need to multiply each digit of 11 with each digit of 10!, i.e it would take No_digits(11) * No_digits(3628800) = 27 = 14 operations. We consider only multiplication operations(we also have to consider addition operations for each of the biproducts and carries).<br>
+            <br>
+            Similarly 53! would take 2*68=136 operations from 52!.<br>
+            <br>
+            52! would take 267 = 134 operations from 51!<br>
+            51! would take 265 = 130 operations from 50!.<br>
+            <br>
+            We can see that there would be a operations required for calculating 53! (No_operations = 136+134+130+...+1). Also in 1000000! the number of digits is 5565709, so we would require large amount of storage and both these difficulties make calculation of N! hard.<br>
+            <br>
+            Is there any way to find the number of digits without actually calculating N!? Let us consider a simple problem of finding the number of digits in a number N.Consider N = 12 , we can also write this as 0.12*102 which is a 2 digit number . Consider N=125 , which can be written as 0.125 *103 which is a 3 digit number. Evidently calculating the exponent of 10 in the scientific notaion and gives the number of digits.<br>
+            <br>
+            For any N,<br>
+            <br>
+            N=x*10exp<br>
+            => log10(N) = log10(x) + exp.<br>
+            For n=95,<br>
+            log10(95) = log10(0.95)+exp, since 95 = 0.95 102<br>
+            N = x10exp , x &lt; 1<br>
+            <br>
+            Taking step on both sides.<br>
+            <br>
+            => step(log10(N)) = step(log10(x)+exp)<br>
+            => step(log10(N)) = exp-1<br>
+            => exp = step(log10(N))+1<br>
+            => No_digits(N) = step(log10(N))+1<br>
+            <br>
+            Applying the above formula to calculate the number of digits of N! gives<br>
+            <br>
+            No_digits(N!) = step(log10(N!) ) +1<br>
+            => No_digits(N!) = step(log10(N*(N-1)(N-2)(N-3)...21)) + 1<br>
+            => No_digits(N!) = step(log10(N) + log10(N-1) + log10(N-2) + ...+log10(2) + log1 0(1) ) +1<br>
+            <br>
+
+            <br>
+            ALGORITHM: <br> <br>
+            <ol>
+                <li>Start</li>
+                <li>Start</li>
+                <li>Input n</li>
+                <li>digitCount = 0</li>
+                <li>i = 2</li>
+                <li> while i &lt;= n repeat steps 6 and 7</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;digitCount = digitCount + log<sub>10</sub>(i)</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;i = i + 1</li>
+    
+                <li>digitCount = digitCount + 1</li>
+    
+                <li>Print digitCount</li>
+                <li>Stop</li>
+
+            </ol>
+        </body>
+</html>
+    
